@@ -3,7 +3,7 @@ libasynckafka - Apache Kafka C++ Async Client Library
 
 Copyright (c) 2016, Ganesh Nikam, [Great Software Laboratory Pvt Ltd](http://gslab.com/).
 
-[https://github.com/edenhill/librdkafka](https://github.com/edenhill/librdkafka)
+[https://github.com/GSLabDev/libasynckafkaclient](https://github.com/GSLabDev/libasynckafkaclient)
 
 **libasynckafka** is a C++ library implementation of the
 [Apache Kafka](http://kafka.apache.org/) protocol, containing both
@@ -14,13 +14,11 @@ uses [libkafka-asio](https://github.com/danieljoos/libkafka-asio).
 **libasynckafka** is licensed under the 2-clause BSD license.
 
 For an introduction to the performance and usage of librdkafka, see
-[INTRODUCTION.md](https://github.com/edenhill/librdkafka/blob/master/INTRODUCTION.md)
+[INTRODUCTION.md](https://github.com/GSLabDev/libasynckafkaclient/blob/master/INTRODUCTION.md)
 
-See the [wiki](https://github.com/edenhill/librdkafka/wiki) for a FAQ.
+See the [wiki](https://github.com/GSLabDev/libasynckafkaclient/wiki) for a FAQ.
 
 **NOTE**: The `master` branch is actively developed, use latest release for production use.
-
-[![Gitter chat](https://badges.gitter.im/edenhill/librdkafka.png)](https://gitter.im/edenhill/librdkafka)
 
 **Apache Kafka 0.9 support:**
   * Not Supported
@@ -71,7 +69,7 @@ See the [wiki](https://github.com/edenhill/librdkafka/wiki) for a FAQ.
 
 ### Usage in code
 
-See [examples](https://github.com/edenhill/librdkafka/blob/master/examples/rdkafka_example.c) for an example producer and consumer.
+See [examples](https://github.com/GSLabDev/libasynckafkaclient/tree/master/examples) for an example producer and consumer.
 
 Link your program with `-lasynckafka -levent`.
 

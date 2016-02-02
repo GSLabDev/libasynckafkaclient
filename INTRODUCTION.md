@@ -45,9 +45,9 @@ The following chapters are available in this document
 ### Documentation
 
 The libasynckafka API is documented in the
-[`KafkaClient.h`](https://github.com/edenhill/librdkafka/blob/master/rdkafka.h)
+[`KafkaClient.h`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/src/KafkaClient.h)
 header file, the configuration properties are documented in
-[`CONFIGURATION.md`](https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md)
+[`CONFIGURATION.md`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/CONFIGURATION.md)
 
 ### Initialization
 
