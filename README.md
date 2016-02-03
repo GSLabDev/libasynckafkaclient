@@ -87,10 +87,10 @@ For a librdkafka introduction, see
 
 ## Examples
 
-See the `examples/`sub-directory.
+See the [examples](https://github.com/GSLabDev/libasynckafkaclient/tree/master/examples) sub-directory.
 
 
 ## Support
 
 File bug reports, feature requests and questions using
-[GitHub Issues](https://github.com/edenhill/librdkafka/issues)
+[GitHub Issues](https://github.com/GSLabDev/libasynckafkaclient/issues)

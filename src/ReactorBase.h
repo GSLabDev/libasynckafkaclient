@@ -34,41 +34,6 @@
 namespace AsyncKakfa
 {
 
-/* NOTE:
-    With current implementation, the reactor class and all the AsyncEventSources are tightly coupled
-    with "epoll". But this is not the generic/ideal design. The ideal design should be as below:
-        1. There should be base class for the reactor which will define common functionality APIs.
-        2. We should derive Epoll, Poll and Select Reactor class from this base class
-        3. Right now the AsyncEventSources are also depend on epoll. We should remove this dependancy
-           to have the generic event sources which can be registered with any reactor (epoll, select or poll
-        4. This could be designed as below:
-            a. Reactor base class should define the enum for the events to registed, something like
-                    REACTOR_IN (corrosponds to EPOLLIN)
-                    REACTOR_OUT
-                    REACTOR_HUNGUP
-                    ....
-                    ....
-                    etc
-            b. Particular derived reactor will convert this flag to the corrosponding flags for it and register
-               the event for that flag.
-            b. Reactor/AsyncEventSource base class should define the structure to save all the event callback and
-               any required data for that event. something like:
-                    struct event_data {
-                        onReadCallback onRead;
-                        onWriteCallback onWrite;
-                        onClosedCallback onClose;
-                        onDisconnectCallback onDisconnect;
-                        void *data;
-                    }
-            c. EventSource should fill this structure with proper handlers for each event and expose it through get
-               method.
-            d. While registring the event Reactor should save this structure against that event
-            e. When the event will come Reactor should call one of the call back method for that eventSource
-
-    Right now this generic design is not implemented because of time constriant. But in future we should implement
-    above design
-*/
-
 class ReactorBase
 {
 public:

@@ -467,16 +467,16 @@ private:
     /* it on socket                                                                 */
     std::deque<std::pair<int32_t, std::string>> m_dqWriteBuffers;
     std::queue<std::string>         m_qInTransitProduceRequest;
-    EventData                     m_eventData;
+    EventData                       m_eventData;
     int32_t                         m_iEventFlags;
-    std::vector<KafkaBroker>      m_sBrokers;   /* broker Ip from config */
-    KafkaBroker                   m_sLeader;
+    std::vector<KafkaBroker>        m_sBrokers;   /* broker Ip from config */
+    KafkaBroker                     m_sLeader;
     std::string                     m_strTopic;    /* topic from the config */
     int32_t                         m_iPartition;  /* partition # from the config */
-    LibeventReactor &             m_reactor;     /* Main reactor object reference */
+    LibeventReactor &               m_reactor;     /* Main reactor object reference */
     int32_t                         m_iSockFd;
-    KafkaClientConfig &           m_config;
-    KafkaPartitionType            m_partitionType;
+    KafkaClientConfig &             m_config;
+    KafkaPartitionType              m_partitionType;
 
 };
 

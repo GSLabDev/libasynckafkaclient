@@ -34,7 +34,6 @@ The following chapters are available in this document
     * Metadata Updates
     * Topic leader change
 
-  *
 
 ## Limitations
   * This client is based on libevent for aysnc operation. So this client can be used
@@ -71,12 +70,12 @@ the top level objects. Both of these object take few input arguments which are e
 
 ### Configuration
 
-To ease the integration with official Apache Kafka Protocol, libasynckafka implements identical configuration properties found in the officila
+To ease the integration with official Apache Kafka Protocol, libasynckafka implements identical configuration properties found in the official
 clients of Apache Kafka. These properties can be used to tune the performance/reliability of the Kafka client. You have to create an object
 of `AsyncKakfa::KafkaClientConfig` and set required properties to appropriate value.
 
 This object is mandatory parameter for creating `AsyncKakfa::KafkaConsumer` OR `AsyncKakfa::KafkaProducer` object. Details of configuration
-properties and their default value are given in `CONFIGURATION.md` file.
+properties and their default value are given in [`CONFIGURATION.md`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/CONFIGURATION.md) file.
 
 ### Brokers
 
@@ -98,7 +97,7 @@ for the partitions and connecting to them. You have to specify IP address (hostn
 
 
    `AsyncKakfa::KafkaClientConfig` object has some properties to tune producer's performance. For details of these properties
-   please check CONFIGURATION.md file:
+   please check [`CONFIGURATION.md`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/CONFIGURATION.md) file:
 
     * `pPartitioningMethod` : Currently only ROUND_ROBIN method is supported
     * `pRequiredAcks` : # of acknowledgements from ISRs for message commit to client
@@ -141,7 +140,7 @@ Other variant of produce API is also availiable. You can give message vector as 
 
 #### Producer object with `partitionId` = -1 (produce to all partitions of the topic)
 
-In above configuration, messages will be send to all partitions in round robin fashion.
+In this configuration, messages will be send to all partitions in round robin fashion.
 
 **Note**: Kafka server supports message ordering within a partition only. If you produce messages to all
           the partitions, the messages will go in different partitions in round robin fashion and message
@@ -152,7 +151,7 @@ In above configuration, messages will be send to all partitions in round robin f
 Topic auto creation is supported by libasynckafka.
 The broker needs to be configured with "auto.create.topics.enable=true".
 
-**Note**: See the `examples/producer-00.cpp` for producer implementation.
+**Note**: See the [`examples/producer-00.cpp`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/examples/producer-00.cpp) for producer implementation.
 
 ### Consumer
 
@@ -169,7 +168,7 @@ The broker needs to be configured with "auto.create.topics.enable=true".
 
 
    `AsyncKakfa::KafkaClientConfig` object has some properties to tune consumer's performance. For details of these properties
-   please check CONFIGURATION.md file:
+   please check [`CONFIGURATION.md`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/CONFIGURATION.md) file:
 
      * `cMaxFetchWaitTimeMs` : Max wait time to get the sufficient amount of data
      * `cMaxFetchBytes` : Max bytes to include in the response
@@ -200,6 +199,6 @@ each topic+partition according to following configuration properties:
 	  * `cAutoCommitIntervalMs` : The frequency in milliseconds that the consumer offsets are commited (written) to offset storage
 	  * `cOffsetStorePath` : Offset store file path
 
-**Note**: See the `examples/consumer-00.cpp` for consumer implementation
+**Note**: See the `examples/consumer-00.cpp` [`examples/consumer-00.cpp`](https://github.com/GSLabDev/libasynckafkaclient/blob/master/examples/consumer-00.cpp) for consumer implementation
 
 ## Performance
