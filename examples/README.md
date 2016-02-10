@@ -19,6 +19,7 @@ libasynckafka Examples:
                messages on Kafka server. To stop the producer press "CTL + c" .
 
     Example run command:
+
                 # ./producer-00 -S 127.0.0.1 -P 9092 -t TEST-2 -p 1 -b 1 -a -1
                 #Messages produced on server. The last offset is: 50080
                 #Messages produced on server. The last offset is: 50084
@@ -43,6 +44,7 @@ libasynckafka Examples:
     **Note** : This program will continuously consume the messages. To stop the consumer press "CTL + c" .
 
     Example run command:
+
                 # ./consumer-00 -S 127.0.0.1 -P 9092 -t TEST-2 -p 1
                 #The mssage number is : 1
                 #The mssage number is : 2
@@ -74,6 +76,7 @@ libasynckafka Examples:
                 #-h help
 
     Example run command:
+
                 # ./performance-00 -S 127.0.0.1 -P 9092 -t TEST-1 -p 1 -b 100 -a -1 -s 100 -c 500000
                 #
                 #   500000 messages produced in :  9019 ms
@@ -97,6 +100,7 @@ libasynckafka Examples:
                 #-h help
 
     Example run command:
+
                 # ./performance-01 -S 127.0.0.1 -P 9092 -t TEST-1 -p 1 -o beginning -m 16384 -c 500000
                 #
                 #   500000 messages consumed in :  7243 ms
