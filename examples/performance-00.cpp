@@ -112,19 +112,25 @@ static void usage(const char *short_opts) {
     }
 }
 
+bool firstRsp = true;
 static int onProduceResponse(std::string topic, int32_t partition, int64_t offset)
 {
-    printf("Messages produced on partition : %d.  The last offset is: %ld\n", partition, offset);
+    //printf("Messages produced on partition : %d.  The last offset is: %ld\n", partition, offset);
 
     struct timeval delay = { 0, 0 };
-    numMsgsDelivered += (offset - partLastOffset[partition]) ;
-    //printf("numMsgsDelivered = %ld\n", numMsgsDelivered);
-
-    if (numMsgsDelivered >= numMsgs) {
-        end = _clock::now();
-        event_base_loopexit(base, &delay);
-    } else {
+    if (firstRsp) {
         partLastOffset[partition] = offset;
+        firstRsp = false;
+    } else {
+        numMsgsDelivered += (offset - partLastOffset[partition]) ;
+        //printf("numMsgsDelivered = %ld\n", numMsgsDelivered);
+
+        if (numMsgsDelivered >= numMsgs) {
+            end = _clock::now();
+            event_base_loopexit(base, &delay);
+        } else {
+            partLastOffset[partition] = offset;
+        }
     }
 
     return 0;

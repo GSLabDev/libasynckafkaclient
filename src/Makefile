@@ -41,7 +41,6 @@ install:
 	install -d $(DST_LIB)
 	install -d $(DST_INCLUDE)
 	install $(TARGET) $(DST_LIB)
-	@cp -rf $(LOCAL_INCLUDE_DIR)/libkafka_asio $(DST_INCLUDE)
 	install -D -m 644 $(ALLHEADERS) $(DST_INCLUDE)
 
 clean:

@@ -96,15 +96,14 @@ static int onProduceResponse(std::string topic, int32_t partition, int64_t offse
 
 
 int64_t numMesgs = 0;
+bool run = true;
 static int onMsgQueued() {
 
     std::stringstream ss;
     ++numMesgs;
-
     ss << "The mssage number is : " << numMesgs;
 
     pProducer->produce(ss.str());
-
     return 0;
 }
 
@@ -115,7 +114,6 @@ signal_cb(evutil_socket_t sig, short events, void *user_data)
     struct timeval delay = { 0, 0 };
 
     printf("Caught an interrupt signal; exiting cleanly in one second.\n");
-
     event_base_loopexit(base, &delay);
 }
 
