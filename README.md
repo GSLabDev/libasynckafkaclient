@@ -79,10 +79,10 @@ Link your program with `-lasynckafka -levent`.
 The API is documented in [src/KafkaClient.h](src/KafkaClient.h)
 
 Configuration properties are documented in
-[CONFIGURATION.md](https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md)
+[CONFIGURATION.md](https://github.com/GSLabDev/libasynckafkaclient/blob/master/CONFIGURATION.md)
 
 For a librdkafka introduction, see
-[INTRODUCTION.md](https://github.com/edenhill/librdkafka/blob/master/INTRODUCTION.md)
+[INTRODUCTION.md](https://github.com/GSLabDev/libasynckafkaclient/blob/master/INTRODUCTION.md)
 
 
 ## Examples

@@ -8,7 +8,7 @@ DST_INCLUDE ?= $(PREFIX)/include
 DST_BIN ?= $(PREFIX)/bin
 
 ROOTDIR := $(shell pwd)
-LOCAL_INCLUDE_DIR?=$(ROOTDIR)
+LOCAL_INCLUDE_DIR?=$(ROOTDIR)/libkafka-asio/lib
 
 WARN ?= -Wall -W
 FPIC ?= -fPIC
@@ -36,7 +36,7 @@ install:
 	for dir in $(INSTALL_DIRS); do \
 		$(MAKE) -C $$dir $@; \
 	done
-	@cp -rf $(LOCAL_INCLUDE_DIR)/libkafka-asio/lib/libkafka_asio $(DST_INCLUDE)
+	@cp -rf $(LOCAL_INCLUDE_DIR)/libkafka_asio $(DST_INCLUDE)
 
 clean:
 	for dir in $(SRC_DIRS); do \
