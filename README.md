@@ -45,14 +45,16 @@ See the [wiki](https://github.com/GSLabDev/libasynckafkaclient/wiki) for a FAQ.
 
 # Usage
 
-## Requirements
+## Requirements ( build dependenices )
 	The GNU toolchain
 	GNU make
    	gcc 4.7 or higher
 	g++ 4.7 or higher
 	Boost library
-    Libevent
-    librt
+	Libevent
+	Librt
+
+	Build dependencies on Ubuntu : make, gcc, g++, libboost-all-dev, libevent-dev, libc6.
 
 ## Instructions
 

@@ -108,3 +108,4 @@ libasynckafka Examples:
                 #   6.58 Mb/s
                 #
 
+    Note : Before running above commands check if shared libary path ( LD_LIBRARY_PATH ) contains path were libasynckafka is installed.
